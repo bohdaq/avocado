@@ -19,7 +19,10 @@ import {TypeDirective} from "./type.directive";
                 <div *ngFor="#item of items | search : term">
                     <div [hidden]="!item.enabled">
                         <label>{{item.name}}</label>
-                        <input ngType [(ngModel)]="item.value" type="text">{{item.value}}
+                        <div class="input-group">
+                            <span class="input-group-addon">$</span>
+                            <input ngType [(ngModel)]="item.value" type="text">{{item.value}}
+                        </div>
                         <br />
                     </div>
                 </div>
