@@ -23,11 +23,6 @@ import {DisplayComponent} from "./display.component";
                         <li><a [routerLink]="['Configuration']">Configuration</a></li>
                         <li><a [routerLink]="['Display']">Display</a></li>
                     </ul>
-                    <form class="navbar-form navbar-left" role="search">
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                      </div>
-                    </form>
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
