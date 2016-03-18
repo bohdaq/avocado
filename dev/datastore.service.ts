@@ -6,13 +6,14 @@ import {Item} from './Item';
 
 @Injectable()
 export class DatastoreService {
+     data: Item[] = [
+        new Item("Name", true),
+        new Item("Surname", true),
+        new Item("Age", true),
+        new Item("Country", true),
+        new Item("Address", true),
+    ];
     getData(): Item[]{
-        var data: Item[] = [];
-        for (var i = 0; i < 10; i++){
-            const name: string = "Item" + i;
-            const item: Item = new Item(name, true);
-            data.push(item);
-        }
-        return data;
+        return this.data;
     }
 }

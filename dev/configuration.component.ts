@@ -3,7 +3,6 @@ import {Inject} from 'angular2/core';
 import {DatastoreService} from "./datastore.service";
 import {Item} from "./item";
 import {SearchPipe} from "./search.pipe"
-import Input from "postcss/d.ts/input";
 
 @Component({
     selector: 'configuration',
@@ -32,8 +31,6 @@ export class ConfigurationComponent {
     private items: Item[];
     constructor(@Inject(DatastoreService) private _datastore: DatastoreService){
         this.items = _datastore.getData();
-        window.items = this.items;
-        console.log(this.items);
     }
 
 }
