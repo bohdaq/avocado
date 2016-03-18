@@ -11,5 +11,6 @@ export class TypeDirective implements OnInit {
 
     ngOnInit():any {
         this._elRef.nativeElement.type = this._defaultType;
+        // this._elRef.nativeElement.dataset.provide = "datepicker";
     }
 }
