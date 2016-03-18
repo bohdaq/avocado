@@ -3,6 +3,7 @@ import {Inject} from 'angular2/core';
 import {DatastoreService} from "./datastore.service";
 import {Item} from "./item";
 import {SearchPipe} from "./search.pipe"
+import {TypeDirective} from "./type.directive";
 
 @Component({
     selector: 'configuration',
@@ -18,13 +19,14 @@ import {SearchPipe} from "./search.pipe"
                 <div *ngFor="#item of items | search : term">
                     <div [hidden]="!item.enabled">
                         <label>{{item.name}}</label>
-                        <input [(ngModel)]="item.value" type="text">{{item.value}}
+                        <input ngType [(ngModel)]="item.value" type="text">{{item.value}}
                         <br />
                     </div>
                 </div>
             </div>
         </div>
     `,
+    directives: [TypeDirective]
 })
 export class DisplayComponent {
     private term: string = "";

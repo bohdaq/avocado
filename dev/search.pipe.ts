@@ -5,6 +5,6 @@ import {Pipe} from "angular2/core";
 })
 export class SearchPipe{
     transform(value, [term]){
-        return value.filter((item)=>item.name.startsWith(term));
+        return value.filter((item)=>item.name.indexOf(term) !=-1);
     }
 }
