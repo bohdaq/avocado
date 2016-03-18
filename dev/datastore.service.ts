@@ -9,14 +9,12 @@ export class DatastoreService {
     data: Item[];
     getData(): Item[]{
         if(this.data == null){
-            console.log("data is null");
             this.data = [
-                new Item("Name", "", true),
-                new Item("Surname", "", true),
-                new Item("Age", "", true),
-                new Item("Country", "", true),
-                new Item("Efficiency", "", true),
-                new Item("Address", "", true),
+                new Item("Name", "", true, "text"),
+                new Item("Age", "", true, "number"),
+                new Item("Sex", "", true, "text"),
+                new Item("Date Of Birth", "", true, "datepicker"),
+                new Item("Salary", "", true, "moneypicker"),
             ];
         }
         return this.data;
