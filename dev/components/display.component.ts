@@ -1,9 +1,10 @@
 import {Component} from 'angular2/core';
 import {Inject} from 'angular2/core';
-import {DatastoreService} from "./datastore.service";
-import {Item} from "./item";
-import {SearchPipe} from "./search.pipe"
-import {TypeDirective} from "./type.directive";
+import {SearchPipe} from "../pipes/search.pipe";
+import {TypeDirective} from "../directives/type.directive";
+import {Item} from "../models/item";
+import {DatastoreService} from "../services/datastore.service";
+
 
 @Component({
     selector: 'configuration',

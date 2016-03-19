@@ -2,7 +2,7 @@ import {
     Injectable
 } from 'angular2/core';
 
-import {Item} from './Item';
+import {Item} from './../models/item';
 
 @Injectable()
 export class DatastoreService {

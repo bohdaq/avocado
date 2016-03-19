@@ -1,8 +1,8 @@
 import {Component} from 'angular2/core';
 import {Inject} from 'angular2/core';
-import {Item} from "./item";
-import {SearchPipe} from "./search.pipe"
-import {DatastoreService} from "./datastore.service";
+import {Item} from "./../models/item";
+import {SearchPipe} from "./../pipes/search.pipe"
+import {DatastoreService} from "./../services/datastore.service";
 
 @Component({
     selector: 'configuration',

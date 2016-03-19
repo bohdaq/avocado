@@ -1,4 +1,4 @@
-import {Directive, ElementRef, OnInit, AfterContentChecked, Output, EventEmitter} from "angular2/core";
+import {Directive, ElementRef, OnInit, Output, EventEmitter} from "angular2/core";
 
 @Directive({
     selector: '[myType]',
