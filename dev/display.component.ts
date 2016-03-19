@@ -20,8 +20,8 @@ import {TypeDirective} from "./type.directive";
                     <div [hidden]="!item.enabled">
                         <label>{{item.name}}</label>
                         <div class="input-group">
-                            <span class="input-group-addon">$</span>
-                            <input ngType [(ngModel)]="item.value" type="text">{{item.value}}
+                            <span [style.visibility]="item.type !== 'moneypicker' ? 'hidden' : 'visible'" class="input-group-addon">$</span>
+                            <input [myType]="item.type" [(ngModel)]="item.value" type="text">{{item.value}}
                         </div>
                         <br />
                     </div>
