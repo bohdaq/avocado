@@ -10,13 +10,10 @@ import {DatastoreService} from "../services/datastore.service";
     selector: 'configuration',
     pipes: [SearchPipe],
     template: `
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input [(ngModel)]="term" type="text" class="form-control" placeholder="Search">
-          </div>
-        </form>
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
+                <input [(ngModel)]="term" type="text" placeholder="Search">
+                <br />
                 <div *ngFor="#item of items | search : term">
                     <div [hidden]="!item.enabled || item.type === 'dropdown'">
                         <label>{{item.name}}</label>
@@ -26,7 +23,7 @@ import {DatastoreService} from "../services/datastore.service";
                                 [myType]="item.type" 
                                 [(ngModel)]="item.value" 
                                 (datepickerUpdates)="item.value = $event"
-                                type="text">{{item.value}}
+                                type="text">
                         </div>
                         <br />
                     </div>
@@ -38,8 +35,8 @@ import {DatastoreService} from "../services/datastore.service";
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                         <li (click)="item.value = option" *ngFor="#option of item.options">{{option}}</li>
                       </ul>
-                      {{item.value}}
-                    </div> 
+                    </div>
+                    <br />
                 </div>
 
             </div>

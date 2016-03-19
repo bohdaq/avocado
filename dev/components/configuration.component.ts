@@ -8,16 +8,12 @@ import {DatastoreService} from "./../services/datastore.service";
     selector: 'configuration',
     pipes: [SearchPipe],
     template: `
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input [(ngModel)]="term" type="text" class="form-control" placeholder="Search">
-          </div>
-        </form>
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
+                <input [(ngModel)]="term" type="text" placeholder="Search">
                 <div *ngFor="#item of items | search : term">
                     <input #enabled [checked]="item.enabled" (change)="item.enabled = enabled.checked" type="checkbox">
-                    <label>{{item.name}} | {{item.value}} | {{item.enabled}}</label>
+                    <label>{{item.name}}</label>
                     <br />
                 </div>
             </div>
