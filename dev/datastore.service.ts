@@ -10,11 +10,11 @@ export class DatastoreService {
     getData(): Item[]{
         if(this.data == null){
             this.data = [
-                new Item("Name", "", true, "text"),
-                new Item("Age", "", true, "number"),
-                new Item("Sex", "", true, "text"),
-                new Item("Date Of Birth", "", true, "datepicker"),
-                new Item("Salary", "", true, "moneypicker"),
+                new Item("Name", "", true, "text", []),
+                new Item("Age", "", true, "number", []),
+                new Item("Sex", "", true, "dropdown", ['male', 'female']),
+                new Item("Date Of Birth", "", true, "datepicker", []),
+                new Item("Salary", "", true, "moneypicker", []),
             ];
         }
         return this.data;
