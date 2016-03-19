@@ -21,7 +21,11 @@ import {TypeDirective} from "./type.directive";
                         <label>{{item.name}}</label>
                         <div class="input-group">
                             <span [style.display]="item.type !== 'moneypicker' ? 'none' : 'table-cell'" class="input-group-addon">$</span>
-                            <input [myType]="item.type" [(ngModel)]="item.value" type="text">{{item.value}}
+                            <input 
+                                [myType]="item.type" 
+                                [(ngModel)]="item.value" 
+                                (datepickerUpdates)="item.value = $event"
+                                type="text">{{item.value}}
                         </div>
                         <br />
                     </div>
