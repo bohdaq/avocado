@@ -11,7 +11,7 @@ export class DatastoreService {
         if(this.data == null){
             this.data = [
                 new Item("Name", "", true, "text", []),
-                new Item("Age", "", true, "number", []),
+                new Item("Age", "", false, "number", []),
                 new Item("Sex", "", true, "dropdown", ['male', 'female']),
                 new Item("Date Of Birth", "", true, "datepicker", []),
                 new Item("Salary", "", true, "moneypicker", []),

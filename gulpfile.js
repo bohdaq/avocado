@@ -40,7 +40,7 @@ gulp.task('build-ts', function () {
         .pipe(typescript(tsProject))
         .pipe(sourcemaps.write())
         //.pipe(jsuglify())
-        .pipe(gulp.dest(appProd + "**/*"));
+        .pipe(gulp.dest(appProd));
 });
 
 gulp.task('build-img', function () {

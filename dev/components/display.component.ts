@@ -38,7 +38,6 @@ import {DatastoreService} from "../services/datastore.service";
                     </div>
                     <br />
                 </div>
-
             </div>
         </div>
     `,
